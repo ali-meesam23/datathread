@@ -28,19 +28,34 @@ This is the easiest and best option. Netlify Forms work seamlessly when you host
    - Netlify will show you DNS records to add in Route53
 
 4. **Update Route53 DNS:**
-   - Delete your current A records for `datathread.ca`
-   - Add a CNAME record:
-     - **Name**: `@` (or leave blank for apex)
-     - **Type**: CNAME (or ALIAS if Route53 supports it for apex)
-     - **Value**: The Netlify domain shown (e.g., `your-site-name.netlify.app`)
-   - For `www` subdomain:
-     - **Name**: `www`
-     - **Type**: CNAME
-     - **Value**: `your-site-name.netlify.app`
 
-   **Note**: Route53 doesn't support CNAME for apex domains. Use:
-   - **ALIAS record** (if available) pointing to Netlify's load balancer
-   - OR use Netlify's DNS (transfer nameservers to Netlify)
+   **Important**: Route53 doesn't allow CNAME records at the apex (root) domain. You have two options:
+
+   ### Option A: Use ALIAS Record (Recommended for Route53)
+   
+   For the apex domain (`datathread.ca`):
+   - **Name**: Leave blank or enter `@` (for apex domain)
+   - **Type**: A (but enable "Alias")
+   - **Alias**: Yes (toggle this ON)
+   - **Alias target**: Select from the dropdown or enter your Netlify domain
+     - Look for: `Netlify` in the alias target dropdown
+     - Or manually enter: `your-site-name.netlify.app` (replace with your actual Netlify domain)
+   - **Evaluate target health**: No (or Yes, your choice)
+   - Click **Create records**
+
+   For the `www` subdomain:
+   - **Name**: `www`
+   - **Type**: CNAME
+   - **Value**: `your-site-name.netlify.app` (your actual Netlify domain)
+   - Click **Create records**
+
+   ### Option B: Use Netlify's DNS (Easier Alternative)
+   
+   If you prefer, you can transfer DNS management to Netlify:
+   - In Netlify dashboard: **Site settings** → **Domain management** → **DNS**
+   - Netlify will provide nameservers
+   - In Route53: Go to your hosted zone → **Edit** → Update nameservers to Netlify's nameservers
+   - This way, Netlify manages all DNS records automatically
 
 5. **Configure Form Notifications:**
    - Go to **Site settings** → **Forms** → **Form notifications**
