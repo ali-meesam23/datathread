@@ -30,34 +30,46 @@ Click **"Deploy site"**
 4. Click **"Verify"**
 5. Netlify will show you DNS configuration options
 
-## Step 4: Configure DNS (Choose One)
+## Step 4: Configure DNS in Route53 (Keep Your Existing DNS)
 
-### Option A: Use Netlify DNS (Easiest) ⭐ Recommended
+**Important**: You're keeping Route53 for DNS management (for email and other services). Just point the website to Netlify.
 
-1. In Netlify: **Domain management** → **DNS**
-2. Click **"Add DNS zone"** or **"Use Netlify DNS"**
-3. Netlify will provide 4 nameservers (e.g., `dns1.p01.nsone.net`)
-4. Copy these nameservers
-5. In AWS Route53:
-   - Go to your hosted zone for `datathread.ca`
-   - Click **Edit** on the nameservers
-   - Replace with Netlify's nameservers
-   - Save
-6. Wait 5-10 minutes for DNS propagation
+1. In Netlify dashboard, after adding `datathread.ca`:
+   - Go to **Domain management**
+   - You'll see your site's Netlify domain (e.g., `your-site-name.netlify.app`)
+   - Note this domain name
 
-### Option B: Keep Route53 DNS
+2. In AWS Route53, update DNS records:
 
-1. In Netlify, note your site's Netlify domain (e.g., `your-site.netlify.app`)
-2. In Route53, for the apex domain (`datathread.ca`):
-   - Delete existing A records
-   - Create new record:
+   **For the apex domain (`datathread.ca`):**
+   - Delete any existing A records pointing to GitHub Pages IPs
+   - Create a new record:
+     - **Name**: Leave blank (or `@`)
      - **Type**: A
-     - **Alias**: Yes
-     - **Route traffic to**: You'll need to use Netlify's load balancer IPs
-     - (This is more complex - Option A is easier)
-3. For `www` subdomain:
+     - **Alias**: Yes (toggle ON)
+     - **Route traffic to**: 
+       - Select: **Alias to CloudFront distribution**
+       - **CloudFront distribution**: You'll need to find Netlify's CloudFront distribution
+       - OR use this workaround: Create a CNAME for `www` and use ALIAS to point to that
+   
+   **Easier approach for apex domain:**
+   - Since Route53 doesn't allow CNAME at apex, use this:
+   - Keep your existing A records (or create new ones) pointing to Netlify's IPs
+   - Netlify will provide IP addresses when you add the domain
+   - OR: Use `www` subdomain and redirect apex to www
+
+   **For `www` subdomain (Recommended):**
+   - **Name**: `www`
    - **Type**: CNAME
-   - **Value**: `your-site.netlify.app`
+   - **Value**: `your-site-name.netlify.app` (your actual Netlify domain)
+   - **TTL**: 300
+
+3. **Alternative: Use www and redirect apex**
+   - Set up `www.datathread.ca` with CNAME to Netlify
+   - In Netlify: **Domain management** → Add redirect from `datathread.ca` to `www.datathread.ca`
+   - This way both work, and you keep Route53 DNS
+
+**Note**: Netlify will show you the exact DNS records needed when you add the custom domain. Follow those instructions, but keep your Route53 hosted zone (don't transfer nameservers).
 
 ## Step 5: Set Up Form Notifications (2 minutes)
 
