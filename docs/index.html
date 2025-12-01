@@ -334,7 +334,7 @@
                 <p><strong>Location:</strong> Project Based – working with clients globally.</p>
             </div>
 
-            <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <form class="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
                 <!-- Hidden field for spam protection -->
                 <input type="hidden" name="form-name" value="contact">
                 <p style="display: none;">
@@ -342,7 +342,7 @@
                 </p>
                 
                 <!-- Success/Error Messages -->
-                <div id="form-message" style="display: none; padding: 1rem; margin-bottom: 1rem; border-radius: 4px;"></div>
+                <div id="form-message" style="display: none; padding: 1rem; margin-bottom: 1.5rem; border-radius: 4px; font-weight: 500;"></div>
                 
                 <div class="form-group">
                     <label for="name">Name *</label>
@@ -419,33 +419,65 @@
                 });
             });
 
-            // Handle Netlify form submission success/error
-            const form = document.querySelector('form[name="contact"]');
+            // Handle Netlify form submission with AJAX (prevents 404 redirect)
+            const form = document.getElementById('contactForm');
             const formMessage = document.getElementById('form-message');
+            const submitButton = form.querySelector('button[type="submit"]');
             
             if (form) {
                 form.addEventListener('submit', function(e) {
-                    // Let Netlify handle the submission
-                    // We'll show a message after redirect
+                    e.preventDefault();
+                    
+                    // Disable submit button and show loading state
+                    const originalButtonText = submitButton.textContent;
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Sending...';
+                    formMessage.style.display = 'none';
+                    
+                    // Create FormData from the form
+                    const formData = new FormData(form);
+                    
+                    // Submit to Netlify using fetch
+                    fetch('/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: new URLSearchParams(formData).toString()
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // Success
+                            formMessage.textContent = 'Thank you! Your message has been sent successfully. We\'ll get back to you soon.';
+                            formMessage.className = 'success';
+                            formMessage.style.display = 'block';
+                            formMessage.style.backgroundColor = '#d4edda';
+                            formMessage.style.color = '#155724';
+                            formMessage.style.border = '1px solid #c3e6cb';
+                            
+                            // Reset form
+                            form.reset();
+                            
+                            // Scroll to message
+                            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        } else {
+                            throw new Error('Form submission failed');
+                        }
+                    })
+                    .catch(error => {
+                        // Error
+                        formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or email us directly at contact@datathread.ca';
+                        formMessage.className = 'error';
+                        formMessage.style.display = 'block';
+                        formMessage.style.backgroundColor = '#f8d7da';
+                        formMessage.style.color = '#721c24';
+                        formMessage.style.border = '1px solid #f5c6cb';
+                        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    })
+                    .finally(() => {
+                        // Re-enable submit button
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalButtonText;
+                    });
                 });
-                
-                // Check for success/error in URL parameters (for Netlify redirect)
-                const urlParams = new URLSearchParams(window.location.search);
-                if (urlParams.get('success') === 'true') {
-                    formMessage.textContent = 'Thank you! Your message has been sent successfully. We\'ll get back to you soon.';
-                    formMessage.style.display = 'block';
-                    formMessage.style.backgroundColor = '#d4edda';
-                    formMessage.style.color = '#155724';
-                    formMessage.style.border = '1px solid #c3e6cb';
-                    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                } else if (urlParams.get('error')) {
-                    formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or email us directly.';
-                    formMessage.style.display = 'block';
-                    formMessage.style.backgroundColor = '#f8d7da';
-                    formMessage.style.color = '#721c24';
-                    formMessage.style.border = '1px solid #f5c6cb';
-                    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
             }
         });
     </script>
