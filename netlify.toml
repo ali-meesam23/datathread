@@ -1,0 +1,21 @@
+# Netlify Configuration File
+# This file helps Netlify understand your site structure
+
+[build]
+  # Publish directory (where your site files are)
+  publish = "docs"
+  
+  # No build command needed for static site
+  # command = ""
+
+# Form settings
+[forms]
+  # Enable Netlify Forms
+  enabled = true
+
+# Redirect rules (if needed)
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
+
