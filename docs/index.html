@@ -1,485 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="DataThread helps financial, crypto, and industrial businesses upgrade their decision-making, trading infrastructure, and operations through rigorous modelling, digital transformation, and custom tools.">
-    <title>DataThread - Designing systems that make your business measurably better</title>
+    <title>DataThread - Model It. Build It. Own It.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-	</head>
+</head>
 <body>
-		<!-- Header -->
-    <header>
-        <div class="container">
-            <img src="logo.png" alt="DataThread Logo" class="logo">
-            <nav>
-                <a href="#about">About</a>
-                <a href="#expertise">Expertise</a>
-                <a href="#services">Services</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#contact">Contact</a>
-				</nav>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="DataThread Logo" class="site-logo">
+            </a>
+            
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="workflow.html">How It Works</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-			</header>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Designing systems that make your business measurably better.</h1>
-            <p class="subheadline">DataThread helps financial, crypto, and industrial businesses upgrade their decision-making, trading infrastructure, and operations through rigorous modelling, digital transformation, and custom tools.</p>
-            <a href="#contact" class="cta-button">Get Started</a>
-				</div>
-			</section>
-
-    <!-- About Us -->
-    <section id="about" class="section">
-				<div class="container">
-            <h2>About Us</h2>
-            <p class="lead">At Data Thread Inc., we sit at the intersection of financial markets, data engineering, and heavy industry.</p>
-            
-            <h3>Our experience spans:</h3>
-            <ul>
-                <li>Algorithmic trading & market making across centralized and decentralized exchanges, managing strategy design, execution pipelines, and P&L optimization for multi-hundred-million AUM environments.</li>
-                <li>Digital transformation and analytics inside large industrial operations (potash, nitrogen, phosphate), delivering forecasting tools, dashboards, and computer-vision projects that improved throughput, safety, and cashflow predictability.</li>
-                <li>Trading systems development for FX, derivatives, and crypto, including REST-based execution platforms, data servers, and real-time analytics for proprietary trading firms.</li>
-            </ul>
-
-            <h3>Our edge is full-stack thinking:</h3>
-            <ul>
-                <li>From business problem → data model & architecture → trading / operational logic → dashboards and workflows.</li>
-                <li>Combining engineering discipline (process design, risk, safety) with quant/trading practicality (latency, fees, slippage, margin).</li>
-            </ul>
-
-            <p class="highlight">We're not a slideware consultancy. We build models and systems that plug into your existing stack and show up in your P&L, KPIs, and uptime.</p>
-
-            <div class="team-section">
-                <h3>Our Team</h3>
-                
-                <div class="team-member">
-                    <div class="team-member-content">
-                        <img src="meesam.jpg" alt="Meesam Ali" class="team-photo">
-                        <div class="team-member-text">
-                            <h4>Principal Consultant – Meesam Ali</h4>
-                            <p><strong>Background:</strong> Chemical engineer and project manager turned algorithmic trader and systems builder.</p>
-                            <p><strong>Experience:</strong></p>
-                            <ul>
-                                <li>Algorithmic trader for a global digital asset firm, working on market-making and execution strategies, data systems, and dashboarding for real-time trading KPIs.</li>
-                                <li>Project manager and process engineer at a leading fertilizer producer, delivering price forecasting tools, ML/computer-vision pilots, and digital transformation programs across potash, nitrogen, and phosphate operations.</li>
-                                <li>Trading systems developer for a proprietary trading firm, building REST APIs, trading bots, and timeseries data infrastructure across stocks, options, FX, and crypto.</li>
-                            </ul>
-                            <p><strong>Tooling & stack:</strong> Python, SQL, Postgres/TimescaleDB, cloud (AWS/GCP/Azure), Power BI, Streamlit/custom web apps, plus industrial systems like SAP and PI where relevant.</p>
-                        </div>
-								</div>
-								</div>
-
-                <div class="team-member">
-                    <div class="team-member-content">
-                        <img src="tingting.jpg" alt="TingTing" class="team-photo">
-                        <div class="team-member-text">
-                            <h4>Creative Partner – TingTing</h4>
-                            <p><strong>Background:</strong> Creative designer and photographer specializing in visual storytelling and brand identity.</p>
-                            <p>TingTing brings a unique creative perspective to DataThread, transforming complex technical concepts into compelling visual narratives. With expertise in photography and design, she helps bridge the gap between data-driven insights and human understanding. Her work focuses on creating intuitive visual interfaces, engaging presentations, and brand experiences that make technical excellence accessible and memorable. Whether capturing the essence of industrial operations through photography or designing user-friendly dashboards, TingTing ensures that our solutions not only function flawlessly but also communicate clearly and inspire confidence.</p>
-								</div>
-							</div>
-						</div>
-
-                <p class="collaborators-note"><strong>Advisors & collaborators:</strong> We also collaborate with a trusted network of engineers, data scientists, and developers for larger or highly specialized engagements.</p>
-					</div>
-				</div>
-			</section>
-			
-    <!-- Areas of Expertise -->
-    <section id="expertise" class="section alt">
-				<div class="container">
-            <h2>Areas of Expertise</h2>
-            <p class="lead">We focus on four core domains:</p>
-            
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <h3>1. Digital transformation & data systems</h3>
-                    <ul>
-                        <li>Workflow digitization and automation for operations, finance, and risk.</li>
-                        <li>KPI and monitoring dashboards for trading desks and industrial operations.</li>
-                        <li>Data pipelines (collection, storage, modelling) for analytics and reporting.</li>
-                    </ul>
-                </div>
-                
-                <div class="expertise-card">
-                    <h3>2. Financial modelling & scenario analysis</h3>
-                    <ul>
-                        <li>Pricing, forecasting, and scenario models (e.g., commodity prices, revenue, risk).</li>
-                        <li>Cashflow stress testing and capital allocation models.</li>
-                        <li>Portfolio and product-level profitability analysis.</li>
-                    </ul>
-                </div>
-                
-                <div class="expertise-card">
-                    <h3>3. Trading system design (TradFi, derivatives, crypto-native)</h3>
-                    <ul>
-                        <li>Architecture for automated and semi-automated trading systems.</li>
-                        <li>Execution logic for market making, arbitrage, and directional strategies.</li>
-                        <li>Risk guards: limits, monitoring, and alerting across multiple venues and accounts.</li>
-                    </ul>
-                </div>
-                
-                <div class="expertise-card">
-                    <h3>4. Industrial & mining process optimization</h3>
-                    <ul>
-                        <li>Throughput and reliability improvements for soft rock / mining operations.</li>
-                        <li>Sensor and computer-vision projects for safety and compliance.</li>
-                        <li>KPI frameworks connecting engineering metrics to financial performance.</li>
-                    </ul>
+            <div class="hero-content">
+                <p class="tagline">Model It. Build It. Own It.</p>
+                <h1>Designing systems that make your business measurably better.</h1>
+                <p>DataThread helps financial, crypto, and industrial businesses upgrade their decision-making, trading infrastructure, and operations through rigorous modelling, digital transformation, and custom tools.</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="cta-button">Explore Our Solutions</a>
+                    <a href="contact.html" class="cta-button secondary">Get In Touch</a>
                 </div>
             </div>
-
-            <p class="industries">Industries we understand deeply: traditional finance, crypto and digital assets, mining (soft rock), and chemical operations (nitrogen and phosphate).</p>
         </div>
-							</section>
-
-    <!-- Services -->
-    <section id="services" class="section">
-        <div class="container">
-            <h2>Our Services</h2>
-            
-            <div class="service-card">
-                <h3>Service 1: Digital Transformation & Data Foundations</h3>
-                <h4>What this service includes</h4>
-                <ul>
-                    <li>Mapping current workflows (trading, ops, finance, or plant operations).</li>
-                    <li>Designing target data architecture (sources, pipelines, storage, access patterns).</li>
-                    <li>Implementing or specifying:
-                        <ul>
-                            <li>ETL/ELT pipelines and data models.</li>
-                            <li>BI dashboards (e.g., Power BI, custom web apps).</li>
-                            <li>Alerts and reporting routines.</li>
-                        </ul>
-                    </li>
-                    <li>Governance: access, logging, and documentation so it's auditable.</li>
-                </ul>
-                <p><strong>Who it's for:</strong> Trading firms and desks drowning in spreadsheets and manual reconciliations. Industrial or mining operations still reliant on paper, email chains, and siloed systems. Founders and COOs who know they're not getting enough value from the data they already have.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Service 2: Financial Modelling & Decision Support</h3>
-                <h4>What this service includes</h4>
-                <ul>
-                    <li>Clarifying the business question (pricing, expansion, hedging, product strategy).</li>
-                    <li>Building robust models for:
-                        <ul>
-                            <li>Pricing and margin analysis.</li>
-                            <li>Commodity / FX / crypto exposure and hedging.</li>
-                            <li>Revenue and cashflow forecasts with scenario analysis.</li>
-                        </ul>
-                    </li>
-                    <li>Validating and stress-testing model assumptions.</li>
-                    <li>Packaging models into user-friendly tools (Excel, dashboards, or apps).</li>
-                    <li>Handover sessions and documentation.</li>
-                </ul>
-                <p><strong>Who it's for:</strong> CFOs, Heads of Finance, and founders who need decision-grade numbers, not best guesses. Commodity producers and traders needing robust price / volume scenarios. Funds and trading shops evaluating new products or strategies.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Service 3: Trading System Architecture & Review (TradFi & Crypto)</h3>
-                <h4>What this service includes</h4>
-                <ul>
-                    <li>Reviewing current trading stack:
-                        <ul>
-                            <li>Connectivity (APIs, FIX, websockets).</li>
-                            <li>Strategy code and data flows.</li>
-                            <li>Risk and monitoring.</li>
-                        </ul>
-                    </li>
-                    <li>Designing or refining:
-                        <ul>
-                            <li>System architecture (data server, execution engine, monitoring layer).</li>
-                            <li>Strategy deployment workflows and change control.</li>
-                            <li>Risk limits, guardrails, and alerting.</li>
-                        </ul>
-                    </li>
-                    <li>Prototyping or specifying:
-                        <ul>
-                            <li>New bots or strategies (e.g., MM, arb, execution algos).</li>
-                            <li>Latency and robustness improvements.</li>
-                        </ul>
-                    </li>
-                    <li>Optionally: collaboration with your dev team to implement.</li>
-                </ul>
-                <p><strong>Who it's for:</strong> Proprietary trading firms and family offices. Market makers and liquidity providers in crypto and FX. Founders with working bots that "sort of work" but lack structure, monitoring, or scalability.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Service 4: Industrial / Mining Performance & Digital Projects</h3>
-                <h4>What this service includes</h4>
-                <ul>
-                    <li>Diagnostic review of key bottlenecks (throughput, downtime, safety).</li>
-                    <li>Identifying where data, automation, or ML can meaningfully move the needle.</li>
-                    <li>Designing and managing:
-                        <ul>
-                            <li>Digital forms, dashboards, and reporting systems.</li>
-                            <li>ML/computer vision pilots for safety or process monitoring.</li>
-                            <li>KPI frameworks linking engineering metrics to financial targets.</li>
-                        </ul>
-                    </li>
-                    <li>Vendor coordination, basic spec writing, and project oversight.</li>
-                </ul>
-                <p><strong>Who it's for:</strong> Mining and chemical operations (potash, nitrogen, phosphate) looking to modernize. Operations leaders who need a bridge between engineering teams, IT, and vendors. Organizations that have tried "digital transformation" before and got shelfware.</p>
-						</div>
-						</div>
-							</section>
-
-    <!-- How It Works -->
-    <section id="how-it-works" class="section alt">
-        <div class="container">
-            <h2>How It Works</h2>
-            <p class="lead">A simple 4-step consultation workflow.</p>
-            
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Discovery (free intro call)</h3>
-                    <p>30–45 minutes to understand your context, constraints, and goals. Quick assessment: what's realistic in 3–6 months vs. long-term.</p>
-						</div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Diagnostic & proposal</h3>
-                    <p>Short diagnostic (1–2 working sessions + data / system review). We define: problem statement and success metrics, scope options (MVP vs. full build), timeline, responsibilities, and fees. You receive a written proposal you can share with your team.</p>
-						</div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Build & implementation</h3>
-                    <p>We work in clearly defined phases (design → build → validate → deploy). Weekly or bi-weekly check-ins with simple dashboards or progress reports. We coordinate with your internal teams (tech, ops, finance, compliance).</p>
-						</div>
-                
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Handover & ongoing support</h3>
-                    <p>Documentation and training for your team. Optional retainer for monitoring, enhancements, and future projects. Periodic reviews to ensure the system or model still matches your reality.</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-    <!-- Client Benefits -->
-    <section class="section">
-				<div class="container">
-            <h2>Client Benefits</h2>
-            <p class="lead">Clients typically see benefits in four buckets:</p>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <h3>1. Clearer decisions</h3>
-                    <p>Reliable models and dashboards instead of ad-hoc spreadsheets. Transparent assumptions so decision-makers can challenge and refine.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <h3>2. Stronger systems</h3>
-                    <p>Trading / operational systems that are architected, not patched together. Reduced operational risk from manual steps and hidden single points of failure.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <h3>3. Better performance</h3>
-                    <p>More stable P&L, tighter forecasts, and improved capital efficiency in trading and operations. Throughput increases, downtime reductions, or improved safety where industrial projects are in scope.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <h3>4. Knowledge transfer</h3>
-                    <p>Your team understands the why and how behind models and systems. Documentation and training mean you're not locked into a black box.</p>
-                </div>
-						</div>
-
-            <p class="highlight">You're not just buying a report; you're buying capability that remains in your organization.</p>
-						</div>
     </section>
 
-    <!-- Project References -->
+    <!-- Core Capabilities -->
+    <section class="capabilities">
+        <div class="container">
+            <div class="section-header">
+                <h2>Core Capabilities</h2>
+                <p>We deliver measurable results across four key areas</p>
+            </div>
+            
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <span class="capability-icon">🎯</span>
+                    <h3>Clearer Decisions</h3>
+                    <p>Reliable models and dashboards replace ad-hoc spreadsheets. Transparent assumptions so decision-makers can challenge and refine.</p>
+                </div>
+                
+                <div class="capability-card">
+                    <span class="capability-icon">⚙️</span>
+                    <h3>Stronger Systems</h3>
+                    <p>Trading and operational systems that are architected, not patched together. Reduced operational risk from manual steps.</p>
+                </div>
+                
+                <div class="capability-card">
+                    <span class="capability-icon">📈</span>
+                    <h3>Better Performance</h3>
+                    <p>More stable P&L, tighter forecasts, and improved capital efficiency in trading and operations.</p>
+                </div>
+                
+                <div class="capability-card">
+                    <span class="capability-icon">🧠</span>
+                    <h3>Knowledge Transfer</h3>
+                    <p>Your team understands the why and how behind models and systems. Documentation and training mean you're not locked into a black box.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
     <section class="section alt">
         <div class="container">
-            <h2>Project References</h2>
-            <p class="lead">Anonymized case snapshots</p>
-            
-            <div class="references">
-                <div class="reference-card">
-                    <h3>1. Digital asset market maker – trading process & data optimization</h3>
-                    <p>Helped a digital asset firm with >$500M AUM streamline data ingestion and trading KPIs, improving visibility into P&L drivers and operational performance across venues.</p>
-						</div>
-                
-                <div class="reference-card">
-                    <h3>2. Global fertilizer producer – potash price forecasting</h3>
-                    <p>Led the development of a potash price forecasting tool, combining econometrics and ML, reducing forecast error from ~20% to ~5% MAPE and lowering cashflow stress by tens of millions per month.</p>
-						</div>
-                
-                <div class="reference-card">
-                    <h3>3. Industrial mining operations – digital transformation & ML pilots</h3>
-                    <p>Managed digital transformation initiatives (digital forms, dashboards, automation) and computer-vision pilots for loadout safety across multiple mine sites, improving reporting, communication, and operational KPIs.</p>
-						</div>
-                
-                <div class="reference-card">
-                    <h3>4. Proprietary trading group – multi-asset trading infrastructure</h3>
-                    <p>Designed and implemented end-to-end trading systems for FX, equities, options, and crypto, including real-time data servers, execution bots, and risk routines; delivered reusable components that shortened time-to-market for new strategies.</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-    <!-- Contact -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            
-            <div class="contact-info">
-                <p><strong>Email:</strong> <a href="mailto:meesam.ali@datathread.ca">meesam.ali@datathread.ca</a></p>
-                <p><strong>Phone:</strong> <a href="tel:+13068801987">+1 (306) 880-1987</a></p>
-                <p><strong>Location:</strong> Project Based – working with clients globally.</p>
+            <div class="section-header">
+                <h2>What We Do</h2>
+                <p>Full-stack thinking from business problem to implementation</p>
             </div>
+            
+            <div class="expertise-grid">
+                <a href="services.html#digital" class="expertise-card">
+                    <h3>Digital Transformation & Data Systems</h3>
+                    <p>Workflow digitization, KPI dashboards, and data pipelines for trading desks and industrial operations.</p>
+                </a>
+                
+                <a href="services.html#financial" class="expertise-card">
+                    <h3>Financial Modelling & Scenario Analysis</h3>
+                    <p>Pricing, forecasting, cashflow stress testing, and portfolio profitability analysis.</p>
+                </a>
+                
+                <a href="services.html#trading" class="expertise-card">
+                    <h3>Trading System Design</h3>
+                    <p>Architecture for automated trading systems, execution logic, and risk guards across TradFi and crypto.</p>
+                </a>
+                
+                <a href="services.html#industrial" class="expertise-card">
+                    <h3>Industrial & Mining Optimization</h3>
+                    <p>Throughput improvements, sensor/CV projects, and KPI frameworks for mining operations.</p>
+                </a>
+            </div>
+        </div>
+    </section>
 
-            <form class="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
-                <!-- Hidden field for spam protection -->
-                <input type="hidden" name="form-name" value="contact">
-                <p style="display: none;">
-                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                </p>
-                
-                <!-- Success/Error Messages -->
-                <div id="form-message" style="display: none; padding: 1rem; margin-bottom: 1.5rem; border-radius: 4px; font-weight: 500;"></div>
-                
-                <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="company">Company</label>
-                    <input type="text" id="company" name="company">
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">What do you want to work on? *</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="budget">Budget (optional)</label>
-                    <select id="budget" name="budget">
-                        <option value="">Select budget range</option>
-                        <option value="under-50k">Under $50K</option>
-                        <option value="50k-100k">$50K - $100K</option>
-                        <option value="100k-250k">$100K - $250K</option>
-                        <option value="250k-plus">$250K+</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="timeline">Timeline (optional)</label>
-                    <select id="timeline" name="timeline">
-                        <option value="">Select timeline</option>
-                        <option value="asap">ASAP</option>
-                        <option value="1-3months">1-3 months</option>
-                        <option value="3-6months">3-6 months</option>
-                        <option value="6-12months">6-12 months</option>
-                        <option value="12plus">12+ months</option>
-                    </select>
-                </div>
-                
-                <button type="submit" class="cta-button">Send Message</button>
-            </form>
+    <!-- CTA Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-darker) 100%); color: white;">
+        <div class="container text-center">
+            <h2 style="color: white; margin-bottom: 1rem;">Ready to Transform Your Operations?</h2>
+            <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2rem;">Book a free discovery call to discuss your challenges and explore how we can help.</p>
+            <a href="contact.html" class="cta-button">Schedule a Call</a>
         </div>
-			</section>
-			
-		<!-- Footer -->
-    <footer>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2024 Data Thread Inc. All rights reserved.</p>
-            <p>
-                <a href="mailto:meesam.ali@datathread.ca">meesam.ali@datathread.ca</a> | 
-                <a href="tel:+13068801987">+1 (306) 880-1987</a>
-            </p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="DataThread Logo" class="site-logo">
+                    <p>Engineering precise financial models and systems for continuous value creation.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="workflow.html">How It Works</a></li>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:meesam.ali@datathread.ca">meesam.ali@datathread.ca</a></p>
+                    <p><a href="tel:+13068801987">+1 (306) 880-1987</a></p>
+                    <p>Working with clients globally</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Data Thread Inc. All rights reserved. | Model It. Build It. Own It.</p>
+            </div>
         </div>
-			</footer>
+    </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            // Handle Netlify form submission with AJAX (prevents 404 redirect)
-            const form = document.getElementById('contactForm');
-            const formMessage = document.getElementById('form-message');
-            const submitButton = form.querySelector('button[type="submit"]');
-            
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Disable submit button and show loading state
-                    const originalButtonText = submitButton.textContent;
-                    submitButton.disabled = true;
-                    submitButton.textContent = 'Sending...';
-                    formMessage.style.display = 'none';
-                    
-                    // Create FormData from the form
-                    const formData = new FormData(form);
-                    
-                    // Submit to Netlify using fetch
-                    fetch('/', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: new URLSearchParams(formData).toString()
-                    })
-                    .then(response => {
-                        if (response.ok) {
-                            // Success
-                            formMessage.textContent = 'Thank you! Your message has been sent successfully. We\'ll get back to you soon.';
-                            formMessage.className = 'success';
-                            formMessage.style.display = 'block';
-                            formMessage.style.backgroundColor = '#d4edda';
-                            formMessage.style.color = '#155724';
-                            formMessage.style.border = '1px solid #c3e6cb';
-                            
-                            // Reset form
-                            form.reset();
-                            
-                            // Scroll to message
-                            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                        } else {
-                            throw new Error('Form submission failed');
-                        }
-                    })
-                    .catch(error => {
-                        // Error
-                        formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or email us directly at contact@datathread.ca';
-                        formMessage.className = 'error';
-                        formMessage.style.display = 'block';
-                        formMessage.style.backgroundColor = '#f8d7da';
-                        formMessage.style.color = '#721c24';
-                        formMessage.style.border = '1px solid #f5c6cb';
-                        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                    })
-                    .finally(() => {
-                        // Re-enable submit button
-                        submitButton.disabled = false;
-                        submitButton.textContent = originalButtonText;
-                    });
-                });
-            }
-        });
+        function toggleMenu() {
+            document.getElementById('mainNav').classList.toggle('active');
+        }
     </script>
-	</body>
+</body>
 </html>

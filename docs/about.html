@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about DataThread - our experience spans algorithmic trading, digital transformation, and industrial operations optimization.">
+    <title>About Us - DataThread</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="DataThread Logo" class="site-logo">
+            </a>
+            
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="workflow.html">How It Works</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Us</h1>
+            <p class="lead">At Data Thread Inc., we sit at the intersection of financial markets, data engineering, and heavy industry.</p>
+        </div>
+    </section>
+
+    <!-- About Intro -->
+    <section class="about-intro">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Edge: Full-Stack Thinking</h2>
+                    <p>From business problem → data model & architecture → trading / operational logic → dashboards and workflows.</p>
+                    <p>We combine engineering discipline (process design, risk, safety) with quant/trading practicality (latency, fees, slippage, margin).</p>
+                    
+                    <div class="highlight-box">
+                        <p>We're not a slideware consultancy. We build models and systems that plug into your existing stack and show up in your P&L, KPIs, and uptime.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-list">
+                    <h3>Our Experience Spans:</h3>
+                    <ul>
+                        <li>Algorithmic trading & market making across centralized and decentralized exchanges, managing strategy design, execution pipelines, and P&L optimization for multi-hundred-million AUM environments.</li>
+                        <li>Digital transformation and analytics inside large industrial operations (potash, nitrogen, phosphate), delivering forecasting tools, dashboards, and computer-vision projects.</li>
+                        <li>Trading systems development for FX, derivatives, and crypto, including REST-based execution platforms, data servers, and real-time analytics.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Team</h2>
+                <p>Expert practitioners with hands-on experience</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="meesam.jpg" alt="Meesam Ali" class="team-photo">
+                    <div class="team-info">
+                        <h3>Meesam Ali</h3>
+                        <p class="role">Principal Consultant</p>
+                        <p><strong>Background:</strong> Chemical engineer and project manager turned algorithmic trader and systems builder.</p>
+                        <p><strong>Experience:</strong></p>
+                        <ul>
+                            <li>Algorithmic trader for a global digital asset firm, working on market-making and execution strategies, data systems, and dashboarding for real-time trading KPIs.</li>
+                            <li>Project manager and process engineer at a leading fertilizer producer, delivering price forecasting tools, ML/computer-vision pilots, and digital transformation programs.</li>
+                            <li>Trading systems developer for a proprietary trading firm, building REST APIs, trading bots, and timeseries data infrastructure.</li>
+                        </ul>
+                        <p style="margin-top: 16px;"><strong>Tooling & Stack:</strong> Python, SQL, Postgres/TimescaleDB, cloud (AWS/GCP/Azure), Power BI, Streamlit/custom web apps, plus industrial systems like SAP and PI where relevant.</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <img src="tingting.jpg" alt="TingTing" class="team-photo">
+                    <div class="team-info">
+                        <h3>TingTing</h3>
+                        <p class="role">Creative Partner</p>
+                        <p><strong>Background:</strong> Creative designer and photographer specializing in visual storytelling and brand identity.</p>
+                        <p>TingTing brings a unique creative perspective to DataThread, transforming complex technical concepts into compelling visual narratives. With expertise in photography and design, she helps bridge the gap between data-driven insights and human understanding.</p>
+                        <p style="margin-top: 16px;">Her work focuses on creating intuitive visual interfaces, engaging presentations, and brand experiences that make technical excellence accessible and memorable. Whether capturing the essence of industrial operations through photography or designing user-friendly dashboards, TingTing ensures that our solutions not only function flawlessly but also communicate clearly and inspire confidence.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collaborators-note">
+                <p><strong>Advisors & Collaborators:</strong> We also collaborate with a trusted network of engineers, data scientists, and developers for larger or highly specialized engagements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-darker) 100%); color: white;">
+        <div class="container text-center">
+            <h2 style="color: white; margin-bottom: 1rem;">Ready to Work Together?</h2>
+            <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2rem;">Let's discuss how our experience can help transform your operations.</p>
+            <a href="contact.html" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="DataThread Logo" class="site-logo">
+                    <p>Engineering precise financial models and systems for continuous value creation.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="workflow.html">How It Works</a></li>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:meesam.ali@datathread.ca">meesam.ali@datathread.ca</a></p>
+                    <p><a href="tel:+13068801987">+1 (306) 880-1987</a></p>
+                    <p>Working with clients globally</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Data Thread Inc. All rights reserved. | Model It. Build It. Own It.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mainNav').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+
