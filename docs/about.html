@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/jpeg" href="favicon.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,35 +39,74 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>About Us</h1>
-            <p class="lead">At Data Thread Inc., we sit at the intersection of financial markets, data engineering, and heavy industry.</p>
+    <!-- Hero Section with Split Layout -->
+    <section class="about-hero-split">
+        <div class="about-hero-wrapper">
+            <div class="about-hero-text">
+                <div class="about-text-content">
+                    <div class="about-heading-line"></div>
+                    <h1>About</h1>
+                    <h2 class="about-subheading">Full-Stack Thinking. Shared Success.</h2>
+                    <p class="lead-intro">At Data Thread Inc., we sit at the intersection of financial markets, data engineering, and heavy industry.<br>Our edge is full-stack thinking:</p>
+                    <ul class="full-stack-list">
+                        <li>From business problem → data model & architecture → trading / operational logic → dashboards and workflows.</li>
+                        <li>Combining engineering discipline (process design, risk, safety) with quant/trading practicality (latency, fees, slippage, margin).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-hero-image">
+                <img src="about us.jpg" alt="About DataThread">
+            </div>
         </div>
     </section>
 
-    <!-- About Intro -->
-    <section class="about-intro">
+    <!-- Experience Section -->
+    <section class="about-content-section">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Our Edge: Full-Stack Thinking</h2>
-                    <p>From business problem → data model & architecture → trading / operational logic → dashboards and workflows.</p>
-                    <p>We combine engineering discipline (process design, risk, safety) with quant/trading practicality (latency, fees, slippage, margin).</p>
-                    
-                    <div class="highlight-box">
-                        <p>We're not a slideware consultancy. We build models and systems that plug into your existing stack and show up in your P&L, KPIs, and uptime.</p>
+            <div class="experience-section">
+                <h2>Our Experience Spans</h2>
+                <div class="experience-grid">
+                    <div class="experience-item">
+                        <div class="experience-image">
+                            <img src="Algorithmic trading & market making.jpg" alt="Algorithmic Trading & Market Making">
+                        </div>
+                        <div class="experience-content">
+                            <h3>Algorithmic Trading & Market Making</h3>
+                            <p>Across centralized and decentralized exchanges, managing strategy design, execution pipelines, and P&L optimization for multi-hundred-million AUM environments.</p>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-image">
+                            <img src="Digital transformation and analytics.jpg" alt="Digital Transformation & Analytics">
+                        </div>
+                        <div class="experience-content">
+                            <h3>Digital Transformation & Analytics</h3>
+                            <p>Inside large industrial operations (potash, nitrogen, phosphate), delivering forecasting tools, dashboards, and computer-vision projects.</p>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-image">
+                            <img src="Trading systems development .jpg" alt="Trading Systems Development">
+                        </div>
+                        <div class="experience-content">
+                            <h3>Trading Systems Development</h3>
+                            <p>For FX, derivatives, and crypto, including REST-based execution platforms, data servers, and real-time analytics.</p>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="experience-list">
-                    <h3>Our Experience Spans:</h3>
-                    <ul>
-                        <li>Algorithmic trading & market making across centralized and decentralized exchanges, managing strategy design, execution pipelines, and P&L optimization for multi-hundred-million AUM environments.</li>
-                        <li>Digital transformation and analytics inside large industrial operations (potash, nitrogen, phosphate), delivering forecasting tools, dashboards, and computer-vision projects.</li>
-                        <li>Trading systems development for FX, derivatives, and crypto, including REST-based execution platforms, data servers, and real-time analytics.</li>
-                    </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Background Section -->
+    <section class="about-video-section">
+        <video class="about-video-bg" autoplay muted loop playsinline>
+            <source src="about-us-bg.mp4" type="video/mp4">
+        </video>
+        <div class="about-video-overlay">
+            <div class="container">
+                <div class="about-video-text">
+                    <p>We're not a slideware consultancy. We build models and systems that plug into your existing stack and show up in your P&L, KPIs, and uptime.</p>
                 </div>
             </div>
         </div>
@@ -77,41 +116,69 @@
     <section class="team-section">
         <div class="container">
             <div class="section-header">
-                <h2>Our Team</h2>
+                <h2>Meet the Team</h2>
                 <p>Expert practitioners with hands-on experience</p>
             </div>
             
             <div class="team-grid">
                 <div class="team-card">
-                    <img src="meesam.jpg" alt="Meesam Ali" class="team-photo">
+                    <div class="team-photo-wrapper">
+                        <img src="meesam.jpg" alt="Meesam Ali" class="team-photo">
+                    </div>
                     <div class="team-info">
                         <h3>Meesam Ali</h3>
                         <p class="role">Principal Consultant</p>
-                        <p><strong>Background:</strong> Chemical engineer and project manager turned algorithmic trader and systems builder.</p>
-                        <p><strong>Experience:</strong></p>
-                        <ul>
-                            <li>Algorithmic trader for a global digital asset firm, working on market-making and execution strategies, data systems, and dashboarding for real-time trading KPIs.</li>
-                            <li>Project manager and process engineer at a leading fertilizer producer, delivering price forecasting tools, ML/computer-vision pilots, and digital transformation programs.</li>
-                            <li>Trading systems developer for a proprietary trading firm, building REST APIs, trading bots, and timeseries data infrastructure.</li>
-                        </ul>
-                        <p style="margin-top: 16px;"><strong>Tooling & Stack:</strong> Python, SQL, Postgres/TimescaleDB, cloud (AWS/GCP/Azure), Power BI, Streamlit/custom web apps, plus industrial systems like SAP and PI where relevant.</p>
+                        <div class="team-contact">
+                            <p><strong>Email:</strong> <a href="mailto:meesam.ali@datathread.ca">meesam.ali@datathread.ca</a></p>
+                            <p><strong>Phone:</strong> <a href="tel:+13068801987">+1 (306) 880-1987</a></p>
+                        </div>
+                        <div class="team-description">
+                            <p><strong>Background:</strong> Chemical engineer and project manager turned algorithmic trader and systems builder.</p>
+                            <p><strong>Experience:</strong></p>
+                            <ul>
+                                <li>Algorithmic trader for a global digital asset firm, working on market-making and execution strategies, data systems, and dashboarding for real-time trading KPIs.</li>
+                                <li>Project manager and process engineer at a leading fertilizer producer, delivering price forecasting tools, ML/computer-vision pilots, and digital transformation programs.</li>
+                                <li>Trading systems developer for a proprietary trading firm, building REST APIs, trading bots, and timeseries data infrastructure.</li>
+                            </ul>
+                            <p style="margin-top: 16px;"><strong>Tooling & Stack:</strong> Python, SQL, Postgres/TimescaleDB, cloud (AWS/GCP/Azure), Power BI, Streamlit/custom web apps, plus industrial systems like SAP and PI where relevant.</p>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="team-card">
-                    <img src="tingting.jpg" alt="TingTing" class="team-photo">
+                    <div class="team-photo-wrapper">
+                        <img src="tingting.jpg" alt="TingTing" class="team-photo">
+                    </div>
                     <div class="team-info">
                         <h3>TingTing</h3>
                         <p class="role">Creative Partner</p>
-                        <p><strong>Background:</strong> Creative designer and photographer specializing in visual storytelling and brand identity.</p>
-                        <p>TingTing brings a unique creative perspective to DataThread, transforming complex technical concepts into compelling visual narratives. With expertise in photography and design, she helps bridge the gap between data-driven insights and human understanding.</p>
-                        <p style="margin-top: 16px;">Her work focuses on creating intuitive visual interfaces, engaging presentations, and brand experiences that make technical excellence accessible and memorable. Whether capturing the essence of industrial operations through photography or designing user-friendly dashboards, TingTing ensures that our solutions not only function flawlessly but also communicate clearly and inspire confidence.</p>
+                        <div class="team-contact">
+                            <p><strong>Email:</strong> <a href="mailto:info@datathread.ca">info@datathread.ca</a></p>
+                        </div>
+                        <div class="team-description">
+                            <p><strong>Background:</strong> Creative designer and photographer specializing in visual storytelling and brand identity.</p>
+                            <p>TingTing brings a unique creative perspective to DataThread, transforming complex technical concepts into compelling visual narratives. With expertise in photography and design, she helps bridge the gap between data-driven insights and human understanding.</p>
+                            <p style="margin-top: 16px;">Her work focuses on creating intuitive visual interfaces, engaging presentations, and brand experiences that make technical excellence accessible and memorable. Whether capturing the essence of industrial operations through photography or designing user-friendly dashboards, TingTing ensures that our solutions not only function flawlessly but also communicate clearly and inspire confidence.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="collaborators-note">
-                <p><strong>Advisors & Collaborators:</strong> We also collaborate with a trusted network of engineers, data scientists, and developers for larger or highly specialized engagements.</p>
+        </div>
+        
+        <!-- Surprise GIF Section -->
+        <div class="surprise-gif-container">
+            <img src="surprise.gif" alt="Surprise" class="surprise-gif" id="surpriseGif">
+            <div class="surprise-hint">
+                <span class="arrow-up">↑</span>
+                <span class="click-text">Click it!</span>
+            </div>
+        </div>
+        
+        <!-- Popup Modal -->
+        <div class="popup-modal" id="popupModal">
+            <div class="popup-content">
+                <h2>Advisors & Collaborators:</h2>
+                <p>We also collaborate with a trusted network of engineers, data scientists, and developers for larger or highly specialized engagements!</p>
             </div>
         </div>
     </section>
@@ -153,6 +220,21 @@
         function toggleMenu() {
             document.getElementById('mainNav').classList.toggle('active');
         }
+        
+        // Surprise GIF popup functionality
+        const surpriseGif = document.getElementById('surpriseGif');
+        const popupModal = document.getElementById('popupModal');
+        
+        surpriseGif.addEventListener('click', function() {
+            popupModal.classList.toggle('active');
+        });
+        
+        // Close popup when clicking outside
+        popupModal.addEventListener('click', function(e) {
+            if (e.target === popupModal) {
+                popupModal.classList.remove('active');
+            }
+        });
     </script>
 </body>
 </html>
