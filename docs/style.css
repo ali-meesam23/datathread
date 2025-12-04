@@ -1861,6 +1861,28 @@ img {
         height: 350px;
         max-height: 350px;
     }
+    
+    .workflow-timeline-section {
+        padding: 180px 0 20px;
+    }
+    
+    .workflow-timeline {
+        gap: 30px;
+    }
+    
+    .steps-container {
+        max-width: 100%;
+        padding: 30px 20px;
+    }
+    
+    .step {
+        gap: 30px;
+    }
+    
+    .step-icon {
+        width: 120px;
+        height: 120px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2006,8 +2028,59 @@ img {
         grid-template-columns: 1fr;
     }
     
+    .workflow-timeline-section {
+        padding: 150px 0 20px;
+    }
+    
+    .workflow-timeline {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 0;
+    }
+    
+    .workflow-timeline::before {
+        display: none;
+    }
+    
+    .workflow-timeline::after {
+        display: none;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .timeline-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .timeline-content {
+        max-width: 100%;
+    }
+    
+    .steps-container {
+        padding: 20px 0;
+    }
+    
     .steps-container::before {
         display: none;
+    }
+    
+    .step-start {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .step-start img {
+        max-width: 80px;
+    }
+    
+    .step-start::after {
+        height: 30px;
     }
     
     .step {
@@ -2015,7 +2088,7 @@ img {
         align-items: center;
         text-align: center;
         gap: 20px;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
     }
     
     .step-icon,
@@ -2030,9 +2103,15 @@ img {
     }
     
     .step-number {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .step-icon {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
     }
     
     .page-header h1 {
