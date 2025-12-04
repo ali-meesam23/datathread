@@ -37,6 +37,10 @@ body {
     background-color: var(--bg-light);
 }
 
+p {
+    font-size: 1.1rem;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -210,7 +214,7 @@ img {
 }
 
 .hero p {
-    font-size: 1.35rem;
+    font-size: 1.485rem;
     color: rgba(255, 255, 255, 0.9);
     max-width: 650px;
     margin-bottom: 3rem;
@@ -329,7 +333,7 @@ img {
 }
 
 .section-header p {
-    font-size: 1.1rem;
+    font-size: 1.21rem;
     color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto;
@@ -384,7 +388,7 @@ img {
 }
 
 .capability-card p {
-    font-size: 0.95rem;
+    font-size: 1.045rem;
     color: var(--text-muted);
     line-height: 1.6;
     margin: 0 24px 24px;
@@ -394,7 +398,7 @@ img {
 .page-header {
     padding-top: calc(var(--header-height) + 60px);
     padding-bottom: 60px;
-    background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-darker) 100%);
+    background: white;
     color: var(--text-light);
     position: relative;
 }
@@ -617,7 +621,7 @@ img {
 }
 
 .about-video-text p {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-size: clamp(1.65rem, 3.3vw, 2.75rem);
     font-weight: 500;
     line-height: 1.6;
     color: white;
@@ -695,7 +699,7 @@ img {
 .experience-item p {
     color: var(--text-muted);
     line-height: 1.7;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .experience-list h3 {
@@ -752,20 +756,21 @@ img {
 .team-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .team-photo-wrapper {
     flex-shrink: 0;
     width: 250px;
-    height: 250px;
+    height: auto;
     overflow: hidden;
     background: var(--bg-dark);
 }
 
 .team-photo {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     display: block;
 }
 
@@ -798,7 +803,7 @@ img {
 
 .team-contact p {
     margin: 8px 0;
-    font-size: 0.95rem;
+    font-size: 1.045rem;
     color: var(--text-muted);
 }
 
@@ -817,7 +822,7 @@ img {
 
 .team-description p {
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: 1.045rem;
     line-height: 1.7;
     margin-bottom: 16px;
 }
@@ -957,7 +962,7 @@ img {
 }
 
 .popup-content p {
-    font-size: 1.1rem;
+    font-size: 1.21rem;
     color: var(--text-muted);
     line-height: 1.7;
 }
@@ -1106,7 +1111,7 @@ img {
 
 .services-section .section-header p {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 1.2rem;
+    font-size: 1.32rem;
 }
 
 .service-package {
@@ -1248,56 +1253,290 @@ img {
 }
 
 /* --- Workflow Page --- */
+/* Workflow Timeline */
+.workflow-timeline-section {
+    padding: 200px 0 20px;
+    background: white;
+    margin-top: 0;
+}
+
+.timeline-title {
+    text-align: center;
+    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 60px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+}
+
+.workflow-timeline {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    padding: 40px 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.workflow-timeline::before {
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: repeating-linear-gradient(
+        to right,
+        var(--border-color) 0,
+        var(--border-color) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    z-index: 0;
+}
+
+.workflow-timeline::after {
+    content: '🎯';
+    position: absolute;
+    right: 0;
+    top: 65px;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.timeline-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    z-index: 2;
+    transition: transform var(--transition);
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 65px;
+    width: 2px;
+    height: 20px;
+    background: var(--border-color);
+    z-index: 1;
+}
+
+.timeline-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--bg-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border: 2px solid var(--border-color);
+    transition: all var(--transition);
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-item:hover .timeline-icon {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.timeline-content {
+    text-align: center;
+    max-width: 180px;
+}
+
+.timeline-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.timeline-content p {
+    font-size: 0.935rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin: 0;
+}
+
 .workflow-section {
-    padding: 80px 0;
+    padding: 0 0 80px;
+    margin-top: 0;
 }
 
 .steps-container {
     position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.step-start {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 40px;
+}
+
+.step-start::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 2px;
+    height: 40px;
+    background: repeating-linear-gradient(
+        to bottom,
+        var(--border-color) 0,
+        var(--border-color) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    transform: translateX(-50%);
+}
+
+.step-start img {
+    max-width: 100px;
+    height: auto;
+}
+
+.steps-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 280px;
+    bottom: 0;
+    width: 2px;
+    background: repeating-linear-gradient(
+        to bottom,
+        var(--border-color) 0,
+        var(--border-color) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    transform: translateX(-50%);
+    z-index: 0;
 }
 
 .step {
+    position: relative;
     display: flex;
+    align-items: center;
     gap: 40px;
-    margin-bottom: 60px;
-    align-items: flex-start;
+    margin-bottom: 80px;
+    z-index: 1;
 }
 
 .step:last-child {
     margin-bottom: 0;
 }
 
+.step-icon-right {
+    flex-direction: row;
+}
+
+.step-icon-right .step-number {
+    order: 1;
+}
+
+.step-icon-right .step-content {
+    order: 2;
+}
+
+.step-icon-right .step-icon {
+    order: 3;
+}
+
+.step-icon-left {
+    flex-direction: row;
+}
+
+.step-icon-left .step-icon {
+    order: 1;
+}
+
+.step-icon-left .step-number {
+    order: 2;
+}
+
+.step-icon-left .step-content {
+    order: 3;
+}
+
+.step-icon {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
 .step-number {
     flex-shrink: 0;
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+    position: relative;
+    z-index: 2;
 }
 
 .step-content {
     flex: 1;
-    background: var(--bg-alt);
-    padding: 30px;
-    border-radius: 12px;
+    background: white;
+    padding: 0;
+    border-radius: 0;
+    max-width: none;
 }
 
 .step-content h3 {
-    color: var(--primary-color);
+    color: var(--text-dark);
     font-size: 1.5rem;
+    font-weight: 700;
     margin-bottom: 12px;
 }
 
 .step-content p {
     color: var(--text-muted);
     line-height: 1.8;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
 /* --- Benefits Section --- */
@@ -1499,7 +1738,7 @@ img {
 }
 
 .contact-expectation p {
-    font-size: 1.3125rem;
+    font-size: 1.44375rem;
     color: var(--primary-dark);
     line-height: 1.7;
     margin: 0;
@@ -1538,7 +1777,7 @@ img {
 }
 
 .footer-brand p {
-    font-size: 1.1rem;
+    font-size: 1.21rem;
     line-height: 1.8;
     max-width: 400px;
 }
@@ -1704,7 +1943,7 @@ img {
     
     .team-photo-wrapper {
         width: 100%;
-        height: 300px;
+        height: auto;
     }
     
     .team-info {
@@ -1767,9 +2006,27 @@ img {
         grid-template-columns: 1fr;
     }
     
+    .steps-container::before {
+        display: none;
+    }
+    
     .step {
-        flex-direction: column;
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
         gap: 20px;
+        margin-bottom: 60px;
+    }
+    
+    .step-icon,
+    .step-number {
+        order: 1;
+    }
+    
+    .step-content {
+        order: 2;
+        max-width: 100%;
+        margin-top: 20px;
     }
     
     .step-number {
@@ -1856,6 +2113,56 @@ img {
     
     .service-description {
         font-size: 1rem;
+    }
+    
+    .workflow-timeline {
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px 0;
+    }
+    
+    .workflow-timeline::before {
+        display: none;
+    }
+    
+    .workflow-timeline::after {
+        display: none;
+    }
+    
+    .timeline-item::before {
+        display: none;
+    }
+    
+    .timeline-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .timeline-content {
+        max-width: 100%;
+    }
+    
+    .steps-container::before {
+        display: none;
+    }
+    
+    .step {
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    
+    .step-icon,
+    .step-number {
+        order: 1;
+    }
+    
+    .step-content {
+        order: 2;
+        max-width: 100%;
+        margin-top: 20px;
     }
 }
 

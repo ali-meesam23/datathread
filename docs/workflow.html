@@ -39,11 +39,64 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Hero Section with Split Layout -->
+    <section class="about-hero-split">
+        <div class="about-hero-wrapper">
+            <div class="about-hero-text">
+                <div class="about-text-content">
+                    <div class="about-heading-line"></div>
+                    <h1>How It Works</h1>
+                    <h2 class="about-subheading">A simple 4-step consultation workflow designed for clarity and results</h2>
+                    <p class="lead-intro">From discovery to implementation, we follow a structured approach that ensures transparency, alignment, and measurable outcomes at every stage.</p>
+                </div>
+            </div>
+            <div class="about-hero-image">
+                <img src="how it works.jpg" alt="How It Works">
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Timeline -->
+    <section class="workflow-timeline-section" id="timeline">
         <div class="container">
-            <h1>How It Works</h1>
-            <p class="lead">A simple 4-step consultation workflow designed for clarity and results</p>
+            <h2 class="timeline-title">Start intelligently. Scale exponentially.</h2>
+            <div class="workflow-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">🧠</div>
+                    <div class="timeline-content">
+                        <h4>1. Discovery</h4>
+                        <p>Gathering Information all around</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">💎</div>
+                    <div class="timeline-content">
+                        <h4>2. Diagnostic & Proposal</h4>
+                        <p>Effective strategies for favorable outcomes</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">⚙️</div>
+                    <div class="timeline-content">
+                        <h4>3. Build & Implementation</h4>
+                        <p>Timely execution as per the plan</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">✨</div>
+                    <div class="timeline-content">
+                        <h4>4. Handover & Ongoing Support</h4>
+                        <p>Making a successful launch</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🚀</div>
+                    <div class="timeline-content">
+                        <h4>5. Optimize</h4>
+                        <p>Steadily climbing up the Hill</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -51,15 +104,24 @@
     <section class="workflow-section">
         <div class="container">
             <div class="steps-container">
-                <div class="step">
+                <div class="step-start">
+                    <img src="start.png" alt="Start">
+                </div>
+                <div class="step step-icon-right" id="step-1">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Discovery (Free Intro Call)</h3>
                         <p>30–45 minutes to understand your context, constraints, and goals. We'll conduct a quick assessment of what's realistic in 3–6 months vs. long-term. This call is free and no-obligation — it's about understanding whether we're a good fit for each other.</p>
                     </div>
+                    <div class="step-icon">
+                        <img src="discovery.png" alt="Discovery">
+                    </div>
                 </div>
                 
-                <div class="step">
+                <div class="step step-icon-left" id="step-2">
+                    <div class="step-icon">
+                        <img src="diagnostic.png" alt="Diagnostic">
+                    </div>
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>Diagnostic & Proposal</h3>
@@ -67,57 +129,38 @@
                     </div>
                 </div>
                 
-                <div class="step">
+                <div class="step step-icon-right" id="step-3">
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>Build & Implementation</h3>
                         <p>We work in clearly defined phases (design → build → validate → deploy). Weekly or bi-weekly check-ins with simple dashboards or progress reports keep everyone aligned. We coordinate with your internal teams (tech, ops, finance, compliance) to ensure smooth integration.</p>
                     </div>
+                    <div class="step-icon">
+                        <img src="implementation.png" alt="Implementation">
+                    </div>
                 </div>
                 
-                <div class="step">
+                <div class="step step-icon-left" id="step-4">
+                    <div class="step-icon">
+                        <img src="handover.png" alt="Handover">
+                    </div>
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <h3>Handover & Ongoing Support</h3>
                         <p>Complete documentation and training for your team so the knowledge stays in-house. Optional retainer available for monitoring, enhancements, and future projects. We conduct periodic reviews to ensure the system or model still matches your evolving reality.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="benefits-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Client Benefits</h2>
-                <p>Clients typically see benefits in four key areas</p>
-            </div>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <h3>1. Clearer Decisions</h3>
-                    <p>Reliable models and dashboards instead of ad-hoc spreadsheets. Transparent assumptions so decision-makers can challenge and refine strategies with confidence.</p>
-                </div>
                 
-                <div class="benefit-card">
-                    <h3>2. Stronger Systems</h3>
-                    <p>Trading and operational systems that are architected, not patched together. Reduced operational risk from manual steps and hidden single points of failure.</p>
+                <div class="step step-icon-right" id="step-5">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Optimize: Steadily Climbing Up the Hill</h3>
+                        <p>We continuously monitor and measure your systems' performance, maintaining and optimizing them throughout their lifetime. As markets evolve, we adapt strategies and enhancements to keep you ahead of the curve.</p>
+                    </div>
+                    <div class="step-icon">
+                        <img src="optimize.png" alt="Optimize">
+                    </div>
                 </div>
-                
-                <div class="benefit-card">
-                    <h3>3. Better Performance</h3>
-                    <p>More stable P&L, tighter forecasts, and improved capital efficiency in trading and operations. Throughput increases, downtime reductions, or improved safety where industrial projects are in scope.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <h3>4. Knowledge Transfer</h3>
-                    <p>Your team understands the why and how behind models and systems. Documentation and training mean you're not locked into a black box — you own the capability.</p>
-                </div>
-            </div>
-            
-            <div class="highlight-box" style="text-align: center; margin-top: 40px;">
-                <p style="margin: 0;">You're not just buying a report; you're buying capability that remains in your organization.</p>
             </div>
         </div>
     </section>
