@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DataThread Products - secure checkout for our consulting tools and templates.">
+    <title>Products - DataThread</title>
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="favicon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png?v=2" alt="DataThread Logo" class="site-logo">
+            </a>
+
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="workflow.html">How It Works</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Products</h1>
+            <p class="lead">Battle-tested tools and templates from our consulting engagements. Secure checkout below.</p>
+        </div>
+    </section>
+
+    <!-- Embedded Checkout -->
+    <section class="section">
+        <div class="container">
+            <div class="checkout-wrapper">
+                <iframe
+                    src="https://payments.doneotc.com/embed?token=datathread"
+                    width="100%"
+                    height="720"
+                    style="border:0;border-radius:12px;max-width:520px;"
+                    allow="payment *"
+                    title="DoneOTC payment"
+                ></iframe>
+                <p class="checkout-disclaimer">
+                    Payments are processed by our PCI-compliant payment partner. We never see or store your card details.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png?v=2" alt="DataThread Logo" class="site-logo">
+                    <p>Engineering precise financial models and systems for continuous value creation.</p>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:meesam.ali@datathread.ca">meesam.ali@datathread.ca</a></p>
+                    <p>Working with clients globally</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Data Thread Inc. All rights reserved. | Model It. Build It. Own It.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mainNav').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
